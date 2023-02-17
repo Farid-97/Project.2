@@ -4,6 +4,7 @@ const { Schema, model } = require("mongoose");
 const cardsSchema = new Schema(
   {
     name: String,
+    nickname: String,
     image: String,
     rating: Number,
     age: Number,
