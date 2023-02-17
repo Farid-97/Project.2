@@ -5,19 +5,24 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
-      required: false,
+      required: true,
       unique: true,
-      trim: true,
     },
     email: {
       type: String,
-      required: true,
       unique: true,
-      trim: true,
-      lowercase: true,
+      required: true,
     },
     password: {
       type: String,
+      unique: true,
+      required: true,
+    },
+    myCollection: [Schema.types.ObjectId],
+    lastpack: Date.now(),
+    coins: Number,
+    GOAT: {
+      enum: ["Lebron James", "Michael Jordan"],
       required: true,
     },
   },
