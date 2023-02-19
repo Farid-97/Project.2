@@ -18,12 +18,12 @@ const userSchema = new Schema(
       unique: true,
       required: true,
     },
-    myCollection: [Schema.types.ObjectId],
-    lastpack: Date.now(),
+    myCollection: [{type:Schema.Types.ObjectId,ref:'Cards'}],
+    
     coins: Number,
     GOAT: {
       enum: ["Lebron James", "Michael Jordan"],
-      required: true,
+      required: false,
     },
   },
   {
