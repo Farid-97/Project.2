@@ -19,7 +19,7 @@ const userSchema = new Schema(
       required: true,
     },
     myCollection: [{type:Schema.Types.ObjectId,ref:'Cards'}],
-    
+    /* lastpack: Date.now(), */
     coins: Number,
     GOAT: {
       enum: ["Lebron James", "Michael Jordan"],

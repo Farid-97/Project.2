@@ -14,9 +14,8 @@ const cardsSchema = new Schema(
     ppg: Number,
     rpg: Number,
     apg: Number,
-    bpg: Number,
-    spg: Number,
     per: Number,
+    ShirtNumber:Number,
     awards: [String],
   },
   {
