@@ -1,20 +1,70 @@
 body {
-  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-nav{
-  padding-top: 5px!important;
- 
+nav {
+  padding-top: 5px !important;
 }
-.logo{
+.logo {
   padding: 0%;
   height: 50px;
   object-fit: contain;
 }
-a {
+/* a {
   color: #00b7ff;
+} */
+
+/* h1 {
+  color: 15px;
+} */
+
+.profileImg {
+  border-radius: 50%;
+  width: 8.5vw;
+  height: 17vh;
 }
 
-h1 {
-  color: 15px;
+.personalInfoDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  width: 22vw;
+  height: 75vh;
+}
+
+.personalInfo{
+  margin-top: 50px;
+  padding: 0;
+  list-style-type: none!important;
+}
+.previewStart{
+  width: 22vw;
+  height: 50vh;
+  background-image: url('../images/brooklynCourt.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lineUpPreview{
+  border-radius: 50%;
+  height: 5vh;
+  width: 2.5vw;
+}
+
+.order2{
+ position: absolute;
+ left: 5vw;
+ bottom: 10vh;
+}
+
+.hidden{
+  display: none;
+}
+
+.logout{
+  text-decoration: none;
+  color: white;
+}
+.navUl{
+  padding-right: 25px;
 }

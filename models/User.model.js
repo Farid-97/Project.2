@@ -27,11 +27,11 @@ const userSchema = new Schema(
       default: Date.now
     },
     coins: Number,
-    GOAT: {
-      type: String,
-      enum: ["Lebron James", "Michael Jordan"],
-      required: true
-    },
+    GOAT: String,
+      /* enum: ["Lebron James", "Michael Jordan"], */
+      /* required: true */
+    
+    cardsCollected:Number,
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
