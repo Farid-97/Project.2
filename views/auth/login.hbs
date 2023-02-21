@@ -35,23 +35,21 @@
   </div>
 </nav>
 
-<div id="login-form">
-  <h2>Log In</h2>
-  <form action="/login" method="POST">
-
-    <label> Username
-      <input type="text" name="username" placeholder="Your username" />
-    </label>
-
-    <label> Email
-      <input type="email" name="email" placeholder="Your email" />
-    </label>
-
-    <label> Password
-      <input type="password" name="password" placeholder="Your password" />
-    </label>
-
-    <button type="submit">Log In</button>
+<div>
+  <div class="container">
+      <div class="brand-title">NBA</div>
+      <div class="inputs">
+        <form action="/signup" method="post">
+          <label class="labelSignup" name="email">EMAIL</label>
+          <input class="inputSignup" type="email" name="email" placeholder="example@test.com" />
+          <label class="labelSignup" name="password">PASSWORD</label>
+          <input class="inputSignup" type="password" name="password" placeholder="Min 6 charaters long" />
+          <label class="labelSignup" name="goat">G.O.A.T</label>
+          <input class="inputSignup" type="goat" name="goat" placeholder="Jordan or James" />
+          <button class="buttonSignup"type="submit">Signup</button>
+        </form>
+      </div>
+    </div>
 
 
     {{#if errorMessage}}

@@ -5,12 +5,11 @@ body {
   border-bottom: 0;
   margin-bottom: 0;
 }
-nav {
-  padding-top: 5px !important;
+
 nav {
   padding-top: 5px !important;
 }
-.logo {
+
 .logo {
   padding: 0%;
   height: 50px;
@@ -39,32 +38,32 @@ nav {
   height: 75vh;
 }
 
-.personalInfo{
+.personalInfo {
   margin-top: 50px;
   padding: 0;
-  list-style-type: none!important;
+  list-style-type: none !important;
 }
-.previewStart{
+.previewStart {
   width: 22vw;
   height: 50vh;
-  background-image: url('../images/brooklynCourt.jpg');
+  background-image: url("../images/brooklynCourt.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.lineUpPreview{
+.lineUpPreview {
   border-radius: 50%;
   height: 5vh;
   width: 2.5vw;
 }
 
-.order2{
- position: absolute;
- left: 5vw;
- bottom: 10vh;
+.order2 {
+  position: absolute;
+  left: 5vw;
+  bottom: 10vh;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 .Explanation {
@@ -109,6 +108,9 @@ nav {
 
 h2 {
   text-align: center;
+}
+.signupForm {
+  padding-top: 15px;
 }
 .form {
   display: flex;
@@ -202,7 +204,7 @@ button {
   font-weight: 900;
   box-shadow: 6px 6px 6px #667584, -6px -6px 6px rgb(117, 113, 113);
   transition: 0.5s;
-}
+} */
 
 button:hover {
   box-shadow: none;
@@ -218,9 +220,8 @@ a {
 
 h1 {
   color: 15px;
-} */
-
-.profileImg {
+}
+*/ .profileImg {
   border-radius: 50%;
   width: 8.5vw;
   height: 17vh;
@@ -235,32 +236,32 @@ h1 {
   height: 75vh;
 }
 
-.personalInfo{
+.personalInfo {
   margin-top: 50px;
   padding: 0;
-  list-style-type: none!important;
+  list-style-type: none !important;
 }
-.previewStart{
+.previewStart {
   width: 22vw;
   height: 50vh;
-  background-image: url('../images/brooklynCourt.jpg');
+  background-image: url("../images/brooklynCourt.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.lineUpPreview{
+.lineUpPreview {
   border-radius: 50%;
   height: 5vh;
   width: 2.5vw;
 }
 
-.order2{
- position: absolute;
- left: 5vw;
- bottom: 10vh;
+.order2 {
+  position: absolute;
+  left: 5vw;
+  bottom: 10vh;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 .Explanation {
@@ -359,19 +360,6 @@ input {
   margin-bottom: 20px;
   text-align: center;
   color: white;
-}
-
-label,
-input,
-button {
-  display: block;
-  width: 100%;
-  padding: 0;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
 }
 
 input::placeholder {
@@ -418,10 +406,10 @@ h1 {
   left: 0;
 }
 
-.logout{
+.logout {
   text-decoration: none;
   color: white;
 }
-.navUl{
+.navUl {
   padding-right: 25px;
 }
