@@ -32,6 +32,10 @@ const userSchema = new Schema(
       enum: ["Lebron James", "Michael Jordan"],
       required: true
     },
+    startlineup:[{
+      type: Schema.Types.ObjectId,
+        ref:'Cards'
+    }]
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
