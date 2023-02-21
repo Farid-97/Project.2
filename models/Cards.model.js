@@ -4,18 +4,20 @@ const { Schema, model } = require("mongoose");
 const cardsSchema = new Schema(
   {
     name: String,
+    numberId: Number,
     nickname: String,
     image: String,
     rating: Number,
     age: Number,
     position: String,
+    rarity: String,
     team: String,
     height: Number,
     ppg: Number,
     rpg: Number,
     apg: Number,
     per: Number,
-    ShirtNumber:Number,
+    shirtNumber:Number,
     awards: [String],
   },
   {

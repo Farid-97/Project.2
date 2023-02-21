@@ -1,0 +1,55 @@
+<nav
+  class="navbar navbar-expand-lg bg-body-tertiary navbar bg-primary"
+  data-bs-theme="dark"
+>
+  <div class="container-fluid">
+    <img
+      class="logo"
+      src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png&w=288&h=288&transparent=true"
+      alt="NBA"
+    />
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="d-flex navbar-nav navUl">
+        <li class="nav-item ">
+          <a class="btn btn-outline-light btn-sm me-2" aria-current="page" href="/">Home page</a>
+        </li>
+        <li class="nav-item ">
+          <a class="btn btn-outline-light btn-sm me-2" href="/allCollections">All collection</a>
+        </li>
+        {{!-- <li class="nav-item align-items-center">
+          <form action="/logout" method="post">
+            <button type="submit">Log Out</button>
+          </form>
+        </li> --}}
+        <li class="nav-item">
+          <a href="/logout" class="btn btn-outline-light btn-sm logout me-2">Log Out</a>
+        </li>
+        <li class="nav-item">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2 h-25 w-100"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-light btn-sm "
+              type="submit"
+            >Search</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

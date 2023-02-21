@@ -18,24 +18,25 @@ const userSchema = new Schema(
       unique: true,
       required: true,
     },
-    myCollection: [
-      {type: Schema.Types.ObjectId,
-        ref:'Cards'
-    }],
+    myCollection: [{ type: Schema.Types.ObjectId, ref: "Cards" }],
     lastpack: {
       type: Date,
-      default: Date.now
+      default: Date.now,
     },
     coins: Number,
     GOAT: {
       type: String,
       enum: ["Lebron James", "Michael Jordan"],
-      required: true
+      required: true,
     },
-    startlineup:[{
-      type: Schema.Types.ObjectId,
-        ref:'Cards'
-    }]
+    startlineup: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Cards",
+      },
+    ],
+
+    cardsCollected: Number,
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
