@@ -39,26 +39,42 @@
   <h2>Sign Up</h2>
   <form action="/signup" method="post">
 
-    <label> Username
-      <input type="text" name="username" placeholder="Your username" />
-    </label>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="Goat">
+  <div>
+    <img
+      class="LBJ"
+      src="/images/png-transparent-lebron-james-illustration-nba-all-star-game-jumpman-los-angeles-lakers-basketball-basketball-players-tshirt-game-sport-thumbnail-removebg-preview.png"
+      alt=""
+    />
+  </div>
+   <div id="login-form">
+    
+  <div class="container">
+    <div class="brand-logo"></div>
+    <div class="brand-title">NBA</div>
+    <div class="inputs">
+      <label>EMAIL</label>
+      <input type="email" placeholder="example@test.com" />
+      <label>PASSWORD</label>
+      <input type="password" placeholder="Min 6 charaters long" />
+      <label>G.O.A.T</label>
+      <input type="goat" placeholder="Jordan or James" />
+      <button type="submit">Signup</button>
+    </div>
+  </div>
 
-    <label> Email
-      <input type="email" name="email" placeholder="Your email" />
-    </label>
-
-    <label> Password
-      <input type="password" name="password" placeholder="Your password" />
-    </label>
-    <label> GOAT
-      <input type="text" name="goat" placeholder="Lebron James, Michael Jordan" />
-    </label>
-
-    <button type="submit">Sign Up</button>
-
-
-    {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
-    {{/if}}
-  </form>
+  {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+  {{/if}}
 </div>
+  <div><img
+      class="MJ"
+      src={{!-- /images/png-transparent-michael-jordan-for-the-chicago-bulls-illustration-chicago-bulls-nba-north-carolina-tar-heels-men-s-basketball-minnesota-timberwolves-hand-painted-basketball-player-wa-removebg-preview.png" --}}
+      alt=""
+    /></div>
+
+</section>
