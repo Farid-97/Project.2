@@ -9,7 +9,17 @@ start-line-up */
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-router.get("/allCollections", (req, res, next) => res.render("allCollection"));
+router.get("/allCollections", async (req, res, next) =>{
+try {
+const sort = { numberId: 1 };
+const cardsCollection = await Cards.find().sort(sort);
+
+    res.render("allCollection",{cardsCollection})
+} catch (error) {
+    
+}
+
+} );
 
 router.get("/start-line-up", (req, res, next) => res.render("start-line-up"));
 
