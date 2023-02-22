@@ -18,6 +18,14 @@ const { findById } = require("../models/Cards.model");
 
 // GET /auth/signup
 router.get("/signup", (req, res, next) => res.render("auth/signup"));
+  /* req.session.destroy((err) => {
+    if (err) {
+      next(err);
+    } else {
+      res.redirect("/");
+    }
+  }) */
+  
 
 router.post("/signup", async (req, res, next) => {
   try {
@@ -76,8 +84,7 @@ router.post("/login", async (req, res, next) => {
       res.render("auth/login", { errorMessage: "Account doesn't exist" });
     } else if (bcrypt.compareSync(password, user.password)) {
       req.session.user = user;
-      /* res.send(user) */
-      res.redirect(`/profile/${user._id}`);
+      res.redirect(`/${user._id}/profile`);
     } else {
       res.render("auth/login", { errorMessage: "Wrong credentials" });
     }
@@ -87,29 +94,10 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-router.get("/:id/profile", async (req, res, next) => {
-  try {
-    let user = await User.findById(req.params.id)
-      .populate("startlineup")
-    res.render("secondProfile", user);
-
-  } catch (error) {
-    console.log(error);
-    next(error);
-  }
-});
-router.get("/profile/:id", async (req, res, next) => {
-  try {
-    let id = req.params.id;
-    let user = await User.findById(id);
-    res.render("profile", { user });
-  } catch (error) {}
-});
-
-router.get("/profile", /* isLoggedIn, */ (req, res, next) => {
+/* router.get("/profile", isLoggedIn, (req, res, next) => {
   let user = req.session.user;
   res.render("profile", user);
-});
+}); */
 
 router.get("/logout", (req, res, next) => {
   req.session.destroy((err) => {
@@ -121,14 +109,5 @@ router.get("/logout", (req, res, next) => {
   });
 });
 
-/* router.post ('/logout', (req, res, next) => {
-    req.session.destroy((err) => {
-        if (err) {
-            next(err);
-        } else {
-            res.redirect('/');
-        }
-    })
-}) */
 
 module.exports = router;

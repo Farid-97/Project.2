@@ -249,7 +249,7 @@ const players = [
   {
     name: "Scottie Pippen",
     nickname: "Pip",
-    imageLineup:'https://www.basketball-reference.com/req/202106291/images/players/pippesc01.jpg',
+    imageLineup:'/images/scottie-pippen.png',
     numberId: 11,
     rating: 97,
     age: 57,
@@ -308,12 +308,8 @@ const myUser = {
 
 async function seed() {
   try {
-    //connect
     await mongoose.connect(MONGO_URI);
-    let dbNBA = await Cards.create(warriors);
-    /* await User.create(myUser); */
-    console.log(`Created ${dbBooks.length} books on the DB`);
-
+    await Cards.create(players);
     mongoose.connection.close();
   } catch (error) {
     console.log(error);

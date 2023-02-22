@@ -18,8 +18,13 @@ nav {
 
 .profileImg {
   border-radius: 50%;
+  border: 2px solid #eee;
   width: 8.5vw;
   height: 17vh;
+}
+hr{
+  border: 2px solid white;
+  width: 210px;
 }
 
 .personalInfoDiv {
@@ -27,12 +32,25 @@ nav {
   flex-direction: column;
   align-items: center;
   margin: 15px;
-  width: 22vw;
   height: 75vh;
+  font-size: 1.4em;
+  text-align:center;
+  border: 2px solid #eee;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 10px 0 #644a02;
+  margin: 50px 5% 0 5%;
+  padding: 20px;
+  width: 21%;
 }
 
+.alignText{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .personalInfo {
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 0;
   list-style-type: none !important;
 }
@@ -198,12 +216,16 @@ nav {
 }
 
 #startlineupSection {
-  width: 98vw;
-  height: 100vh;
+  height: calc(100vh - 63px);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  background-color: #9B4636;
+  background: -webkit-linear-gradient(
+    top,
+    #8c470a 11.2%,
+    #86450b 51.2%,
+    #713a09 98.6%
+  );
 }
 
 .courtLineup{
@@ -211,7 +233,7 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
     width: 50vw;
-    height: 100vh;
+    height: calc(100vh - 63px);
     background-image: url("../images/court.jpg");
     background-size: cover;
     /* position: absolute; */
@@ -227,6 +249,7 @@ nav {
     border-radius: 50%;
     width: 120px;
     height: 120px;
+    
 }
 
 .player1{
@@ -269,7 +292,7 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-padding-top: 20px;
+  
 
 }
 .card {
@@ -311,7 +334,7 @@ padding-top: 20px;
 .card .details .center {
   padding: 20px;
   text-align: center;
-  background: #fff;
+  background: rgba(72, 4, 72, 0.256);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -359,9 +382,9 @@ padding-top: 20px;
 .back{
   
 background: #959595; /* Old browsers */
-background: -moz-linear-gradient(top,  #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: -moz-linear-gradient(top,  #1D1D1D 0%, #383838 46%, #4e4e4e 50%, #4e4e4e 53%, #010101 76%, #0d0d0d 87%, #959595 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #1D1D1D 0%, #383838 46%, #4e4e4e 50%, #4e4e4e 53%, #010101 76%, #0d0d0d 87%, #959595 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #1D1D1D 0%, #383838 46%, #4e4e4e 50%, #4e4e4e 53%, #010101 76%, #0d0d0d 87%, #959595 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
 ;
 }
@@ -413,4 +436,10 @@ div.fg{
     var(--gold) 31%);
   color: #1e2127;
   transform: scale(1);
+}
+
+.profileInfo{
+  margin-bottom: 15px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
 }

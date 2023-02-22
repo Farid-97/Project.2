@@ -25,15 +25,20 @@
           <a
             class="btn btn-outline-light btn-sm me-2"
             aria-current="page"
-            href="/"
-          >Home page</a>
+            href="/{{user._id}}/profile"
+          >Profile</a>
         </li>
         <li class="nav-item">
           <a
             class="btn btn-outline-light btn-sm me-2"
-            href="/allCollections"
+            href="/allCollection/{{user._id}}"
           >All collection</a>
         </li>
+        {{! <li class="nav-item align-items-center">
+          <form action="/logout" method="post">
+            <button type="submit">Log Out</button>
+          </form>
+        </li> }}
         <li class="nav-item">
           <a href="/logout" class="btn btn-outline-light btn-sm logout me-2">Log
             Out</a>
@@ -56,21 +61,35 @@
     </div>
   </div>
 </nav>
+<body class="back">
+  
 
-<section>
-  <div class="personalInfoDiv">
-    <div>
-      <img
-        src="https://hips.hearstapps.com/hmg-prod/images/michael-jordan.jpg"
-        alt=""
-        class="profileImg"
+<div class="wrapper">
+  <div class="bg"> Cards collection </div>
+  <div class="fg"> Cards collection </div>
+</div>
+<section class="organize">
+ 
+  {{#each cardsCollection}}
+  <div class="card">
+    <div class="image">
+      <img class="front"
+        src="{{imageCard}}"
       />
     </div>
-    <ul class="personalInfo">
-      <li>{{user.username}}</li>
-      <li>G.O.A.T :{{user.GOAT}}</li>
-      <li>Cards Collected: {{user.cardsCollected}}</li>
-      <li><a href="/start-line-up/{{user._id}}">Start Lineup</a></li>
-    </ul>
+    <div class="details">
+      <div class="center">
+        <h1 class="inside">{{name}}<br /><span class="insides">{{team}}</span></h1>
+        <p class="p">{{shirtNumber}}</p>
+        <ul class="ul">
+          <li class="li"><a class="a" href="#"><i
+                class="fa {{!-- fa-facebook --}}"
+                aria-hidden="true"
+              ></i></a></li>
+        </ul>
+      </div>
+    </div>
   </div>
+  {{/each}}
 </section>
+</body>

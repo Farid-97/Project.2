@@ -21,17 +21,24 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="d-flex navbar-nav navUl">
-        <li class="nav-item">
+        {{!-- <li class="nav-item">
           <a
             class="btn btn-outline-light btn-sm me-2"
             aria-current="page"
             href="/"
           >Home page</a>
+        </li> --}}
+        <li class="nav-item">
+          <a
+            class="btn btn-outline-light btn-sm me-2"
+            aria-current="page"
+            href="/{{user._id}}/profile"
+          >Profile</a>
         </li>
         <li class="nav-item">
           <a
             class="btn btn-outline-light btn-sm me-2"
-            href="/allCollections"
+            href="/allCollection/{{user._id}}"
           >All collection</a>
         </li>
         <li class="nav-item">
@@ -57,34 +64,58 @@
   </div>
 </nav>
 <section id="startlineupSection">
+  <div class="personalInfoDiv">
+    <div>
+      <img
+        src="https://hips.hearstapps.com/hmg-prod/images/michael-jordan.jpg"
+        alt=""
+        class="profileImg"
+      />
+    </div>
+    <hr>
+    <ul class="personalInfo alignText">
+      <li class="profileInfo">Coach: {{user.username}}</li>
+      <li class="profileInfo">G.O.A.T: {{user.GOAT}}</li>
+      <li class="profileInfo">Cards Collected: {{user.cardsCollected}}</li>
+    </ul>
+    <hr>
+      <a class="profileInfo btn btn-outline-light" href="/editPersonalProfile/{{user._id}}">Edit Profile</a>
+      {{#unless existStartlineup}}
+      <a class="profileInfo btn btn-outline-light" href="/start-line-up/{{user._id}}">Create Start Lineup</a>
+      {{/unless}}
+      {{#if existStartlineup}}
+      <a class="profileInfo btn btn-outline-light" href="/start-line-up/{{user._id}}">Edit Start Lineup</a>
+      <a class="profileInfo btn btn-outline-light" href="/start-line-up/{{user._id}}/delete">Delete Start Lineup</a>
+      {{/if}}
+
+  </div>
   <div class="courtLineup">
     <div class="round player1"><img
-        src="{{startlineup.0.imageLineup}}"
+        src="{{user.startlineup.0.imageLineup}}"
         alt=""
         class="roundedImg"
       /></div>
     <div class="round player2"><img
-        src="{{startlineup.1.imageLineup}}"
+        src="{{user.startlineup.1.imageLineup}}"
         alt=""
         class="roundedImg"
       /></div>
     <div class="round player3"><img
-        src="{{startlineup.2.imageLineup}}"
+        src="{{user.startlineup.2.imageLineup}}"
         alt=""
         class="roundedImg"
       /></div>
     <div class="round player4"><img
-        src="{{startlineup.3.imageLineup}}"
+        src="{{user.startlineup.3.imageLineup}}"
         alt=""
         class="roundedImg"
       /></div>
     <div class="round player5"><img
-        src="{{startlineup.4.imageLineup}}"
+        src="{{user.startlineup.4.imageLineup}}"
         alt=""
         class="roundedImg"
       /></div>
   </div>
   <div>
-
   </div>
 </section>
