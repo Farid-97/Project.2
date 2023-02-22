@@ -10,6 +10,7 @@ const players = [
     name: "Andrew Wiggins",
     numberId: 1,
     nickname: "Wiggs",
+    imageLineup:'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203952.png',
     rating: 82,
     age: 27,
     rarity: "Commum",
@@ -31,6 +32,7 @@ const players = [
   {
     name: "Jordan Poole",
     nickname: "Poole Part",
+    imageLineup:'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1629673.png',
     numberId: 2,
     rating: 84,
     age: 23,
@@ -48,6 +50,7 @@ const players = [
   {
     name: "Klay Thompson",
     nickname: "Big Smokey",
+    imageLineup:'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202691.png',
     numberId: 3,
     rating: 86,
     age: 33,
@@ -72,6 +75,7 @@ const players = [
   {
     name: "Draymond Green",
     nickname: "Day-Day",
+    imageLineup:'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203110.png',
     numberId: 4,
     rating: 83,
     age: 32,
@@ -94,6 +98,7 @@ const players = [
   {
     name:"Malik Beasley",
     nickname: "B-Easy",
+    imageLineup:'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1627736.png',
     numberId: 5,
     rating: 76,
     age: 26,
@@ -111,6 +116,7 @@ const players = [
   {
     name: "D'Angelo Russell",
     nickname: "DLo",
+    imageLineup:'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1626156.png',
     numberId: 6,
     rating: 83,
     age: 26,
@@ -128,6 +134,7 @@ const players = [
   {
     name: "Anthony Davis",
     nickname: "The Brow",
+    imageLineup:'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203076.png',
     numberId: 7,
     rating: 94,
     age: 29,
@@ -152,6 +159,7 @@ const players = [
   {
     name: "Stephen Curry",
     nickname: "Chef Curry",
+    imageLineup:'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201939.png',
     numberId: 8,
     rating: 96,
     age: 34,
@@ -177,6 +185,7 @@ const players = [
   {
     name: "Lebron James",
     nickname: "King James",
+    imageLineup:'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2544.png',
     numberId: 9,
     rating: 98,
     age: 38,
@@ -213,7 +222,7 @@ async function seed() {
   try {
     //connect
     await mongoose.connect(MONGO_URI);
-    let dbNBA = await Cards.create(warriors);
+    let dbNBA = await Cards.create(players);
     /* await User.create(myUser); */
     console.log(`Created ${dbBooks.length} books on the DB`);
 

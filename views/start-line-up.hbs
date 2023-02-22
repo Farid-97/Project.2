@@ -56,3 +56,48 @@
     </div>
   </div>
 </nav>
+
+<section id="startlineupSection">
+  <div class="courtLineup">
+    <div class="round player1 defaultPic"><h6>Player 1</h6></div>
+    <div class="round player2 defaultPic"><h6>Player 2</h6></div>
+    <div class="round player3 defaultPic"><h6>Player 3</h6></div>
+    <div class="round player4 defaultPic"><h6>Player 4</h6></div>
+    <div class="round player5 defaultPic"><h6>Player 5</h6></div>
+  </div>
+  <div>
+    <form class="pickPlayer" action="/start-line-up/{{user._id}}/edit" method="post">
+      <label for="player1" >Choose a player 1</label>
+      <select name="player1" id="selection1"class="playerLabel">
+        {{#each players}}
+          <option value="{{_id}}"> {{name}}</option>
+        {{/each}}
+      </select>
+      <label for="player2" >Choose a player 2</label>
+      <select name="player2" id="selection2" class="playerLabel">
+        {{#each players}}
+          <option value="{{_id}}"> {{name}}</option>
+        {{/each}}
+      </select>
+      <label for="player3" >Choose a player 3</label>
+      <select name="player3" id="selection3" class="playerLabel">
+        {{#each players}}
+          <option value="{{_id}}"> {{name}}</option>
+        {{/each}}
+      </select>
+      <label for="player4">Choose a player 4</label>
+      <select name="player4" id="selection4" class="playerLabel">
+        {{#each players}}
+          <option value="{{_id}}"> {{name}}</option>
+        {{/each}}
+      </select>
+      <label for="player5" >Choose a player 5</label>
+      <select name="player5" id="selection5" class="playerLabel">
+        {{#each players}}
+          <option value="{{_id}}"> {{name}}</option>
+        {{/each}}
+      </select>
+      <button id="submitStartlineup">submit</button>
+    </form>
+  </div>
+</section>

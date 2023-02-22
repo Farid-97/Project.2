@@ -56,21 +56,35 @@
     </div>
   </div>
 </nav>
-
-<section>
-  <div class="personalInfoDiv">
-    <div>
-      <img
-        src="https://hips.hearstapps.com/hmg-prod/images/michael-jordan.jpg"
+<section id="startlineupSection">
+  <div class="courtLineup">
+    <div class="round player1"><img
+        src="{{startlineup.0.imageLineup}}"
         alt=""
-        class="profileImg"
-      />
-    </div>
-    <ul class="personalInfo">
-      <li>{{user.username}}</li>
-      <li>G.O.A.T :{{user.GOAT}}</li>
-      <li>Cards Collected: {{user.cardsCollected}}</li>
-      <li><a href="/start-line-up/{{user._id}}">Start Lineup</a></li>
-    </ul>
+        class="roundedImg"
+      /></div>
+    <div class="round player2"><img
+        src="{{startlineup.1.imageLineup}}"
+        alt=""
+        class="roundedImg"
+      /></div>
+    <div class="round player3"><img
+        src="{{startlineup.2.imageLineup}}"
+        alt=""
+        class="roundedImg"
+      /></div>
+    <div class="round player4"><img
+        src="{{startlineup.3.imageLineup}}"
+        alt=""
+        class="roundedImg"
+      /></div>
+    <div class="round player5"><img
+        src="{{startlineup.4.imageLineup}}"
+        alt=""
+        class="roundedImg"
+      /></div>
+  </div>
+  <div>
+
   </div>
 </section>

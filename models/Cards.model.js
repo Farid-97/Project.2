@@ -6,7 +6,7 @@ const cardsSchema = new Schema(
     name: String,
     numberId: Number,
     nickname: String,
-    image: String,
+    imageLineup: String,
     rating: Number,
     age: Number,
     position: String,

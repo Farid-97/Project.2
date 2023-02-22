@@ -191,8 +191,76 @@ nav {
   font-weight: 900;
   box-shadow: 6px 6px 6px #667584, -6px -6px 6px rgb(117, 113, 113);
   transition: 0.5s;
-} 
+}
 
 .buttonSignup:hover {
   box-shadow: none;
 }
+
+#startlineupSection {
+  width: 98vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #9B4636;
+}
+
+.courtLineup{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50vw;
+    height: 100vh;
+    background-image: url("../images/court.jpg");
+    background-size: cover;
+    /* position: absolute; */
+    margin-right: 300px;
+}
+
+.pickPlayer{
+    display: flex;
+    flex-direction: column;
+}
+
+.round{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+.player1{
+    margin-left: 90px;
+    margin-top: 90px;
+}
+.player2{
+    align-self: center;
+}
+
+.player3{
+    margin-top: 500px;
+}
+.player4{
+    align-self: center;
+}
+
+.player5{
+    margin-top: 90px;
+}
+.playerLabel{
+    margin-bottom: 20px;
+}
+.defaultPic{
+    background-image: url("../images/defaultPic.png");
+    background-size: cover;
+}
+
+.roundedImg{
+  border-radius: 50%;
+  width: 120px;
+  height: 100px;
+}
+/* .ad{
+    background-image: url("https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203076.png");
+    background-size: cover;
+} */
