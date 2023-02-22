@@ -1,9 +1,14 @@
-body {
+.Goat {
+  padding-top: 40px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   border: 0;
-  padding-bottom: 0;
-  border-bottom: 0;
-  margin-bottom: 0;
+  height: calc(100vh - 63px);
+  background: linear-gradient(
+    109.6deg,
+    rgb(36, 45, 57) 11.2%,
+    rgb(16, 37, 60) 51.2%,
+    rgb(0, 0, 0) 98.6%
+  );
 }
 
 nav {
@@ -61,19 +66,18 @@ nav {
 }
 .Explanation {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   padding-right: 0px;
 }
 .text {
   text-align: justify;
   width: 50vw;
-  padding-top: 100px;
 }
 .title {
   text-align: center;
 }
-.Goat {
+.goat {
   display: flex;
   background: linear-gradient(
     109.6deg,
@@ -85,23 +89,26 @@ nav {
   flex-direction: row;
 }
 .LBJ {
-  height: 90vh;
+  padding-left: 50px;
+  height: 80vh;
 }
 .MJ {
-  height: 90vh;
-  padding-left: 15px;
+  height: 80vh;
+  padding-left: 50px;
+  padding-top: 20px;
 }
 
-#login-form {
+#form {
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
-  padding-left: 150px;
+  padding-top: 50px;
+  padding-left: 110px;
   padding-right: 100px;
 }
 
 .signupForm {
   padding-top: 15px;
+  
 }
 .form {
   display: flex;
@@ -111,10 +118,11 @@ nav {
 }
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
 
-.container {
+.containe {
   position: relative;
   width: 350px;
   height: 500px;
+
   border-radius: 20px;
   padding: 40px;
   box-sizing: border-box;
@@ -203,59 +211,59 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  background-color: #9B4636;
+  background-color: #9b4636;
 }
 
-.courtLineup{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 50vw;
-    height: 100vh;
-    background-image: url("../images/court.jpg");
-    background-size: cover;
-    /* position: absolute; */
-    margin-right: 300px;
+.courtLineup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50vw;
+  height: 100vh;
+  background-image: url("../images/court.jpg");
+  background-size: cover;
+  /* position: absolute; */
+  margin-right: 300px;
 }
 
-.pickPlayer{
-    display: flex;
-    flex-direction: column;
+.pickPlayer {
+  display: flex;
+  flex-direction: column;
 }
 
-.round{
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
+.round {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
 }
 
-.player1{
-    margin-left: 90px;
-    margin-top: 90px;
+.player1 {
+  margin-left: 90px;
+  margin-top: 90px;
 }
-.player2{
-    align-self: center;
-}
-
-.player3{
-    margin-top: 500px;
-}
-.player4{
-    align-self: center;
+.player2 {
+  align-self: center;
 }
 
-.player5{
-    margin-top: 90px;
+.player3 {
+  margin-top: 500px;
 }
-.playerLabel{
-    margin-bottom: 20px;
-}
-.defaultPic{
-    background-image: url("../images/defaultPic.png");
-    background-size: cover;
+.player4 {
+  align-self: center;
 }
 
-.roundedImg{
+.player5 {
+  margin-top: 90px;
+}
+.playerLabel {
+  margin-bottom: 20px;
+}
+.defaultPic {
+  background-image: url("../images/defaultPic.png");
+  background-size: cover;
+}
+
+.roundedImg {
   border-radius: 50%;
   width: 120px;
   height: 100px;
@@ -264,18 +272,17 @@ nav {
     background-image: url("https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203076.png");
     background-size: cover;
 } */
-.organize{
+.organize {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-padding-top: 20px;
-
+  padding-top: 20px;
 }
 .card {
   /* position: absolute; */
-  
- /*  transform: translate(-50%,-50%); */
+
+  /*  transform: translate(-50%,-50%); */
   width: 360px;
   height: 400px;
   background: #000;
@@ -288,20 +295,20 @@ padding-top: 20px;
 }
 .card .image .front {
   width: 100%;
-  transition: .5s;
+  transition: 0.5s;
 }
 .card:hover .image .front {
-  opacity: .5;
-  transform: translateX(30%);/*100%*/
+  opacity: 0.5;
+  transform: translateX(30%); /*100%*/
 }
 .card .details {
   position: absolute;
   top: 0;
   left: 0;
-  width: 70%;/*100%*/
+  width: 70%; /*100%*/
   height: 100%;
-  background:#452c63;
-  transition: .5s;
+  background: #452c63;
+  transition: 0.5s;
   transform-origin: left;
   transform: perspective(2000px) rotateY(-90deg);
 }
@@ -351,19 +358,44 @@ padding-top: 20px;
   height: 30px;
   line-height: 30px;
   text-align: center;
-  transform: .5s;
+  transform: 0.5s;
 }
 .card .details .center ul li a:hover {
   background: #ff3636;
 }
-.back{
-  
-background: #959595; /* Old browsers */
-background: -moz-linear-gradient(top,  #959595 0%, #0d0d0d 46%, #010101 50%, #0a0a0a 53%, #4e4e4e 76%, #383838 87%, #1b1b1b 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0a 53%,#4e4e4e 76%,#383838 87%,#1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
-;
+.back {
+  background: #959595; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
 }
 
 :root {
@@ -380,37 +412,214 @@ body {
 .wrapper {
   background: radial-gradient(#272727, #1b1b1b);
   display: grid;
-  grid-template-areas: 'overlap';
+  grid-template-areas: "overlap";
   place-content: center;
   text-transform: uppercase;
   height: 20vh;
 }
 .wrapper > div {
-  background-clip: text;  
+  background-clip: text;
   -webkit-background-clip: text;
   color: #363833;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 900;
-  font-size: clamp( 3em, 5vw, 15rem);
+  font-size: clamp(3em, 5vw, 15rem);
   grid-area: overlap;
   letter-spacing: 1px;
   -webkit-text-stroke: 4px transparent;
 }
 div.bg {
-  background-image: repeating-linear-gradient( 105deg, 
-    var(--gold) 0% , 
+  background-image: repeating-linear-gradient(
+    105deg,
+    var(--gold) 0%,
     var(--dark-shadow) 5%,
-    var(--gold) 12%);
+    var(--gold) 12%
+  );
   color: transparent;
   filter: drop-shadow(5px 15px 15px black);
   transform: scaleY(1.05);
   transform-origin: top;
 }
-div.fg{
-  background-image: repeating-linear-gradient( 5deg,  
-    var(--gold) 0% , 
-    var(--light-shadow) 23%, 
-    var(--gold) 31%);
+div.fg {
+  background-image: repeating-linear-gradient(
+    5deg,
+    var(--gold) 0%,
+    var(--light-shadow) 23%,
+    var(--gold) 31%
+  );
   color: #1e2127;
   transform: scale(1);
 }
+ .Container {
+  position: relative;
+  width: 320px;
+  margin: 100px auto 0 auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face {
+  position: absolute;
+  width: 300px;
+  height: 187px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(227, 219, 219, 0);
+  display: flex;
+}
+
+span {
+  margin: auto;
+  font-size: 2rem;
+}
+.russel {
+  background-color: white;
+}
+
+.carousel__face:nth-child(1) {
+  background-image: url("");
+  transform: rotateY(0deg) translateZ(430px);
+}
+.carousel__face:nth-child(2) {
+  background-image: url("https://media.giphy.com/media/3oEdv5e5Zd2gsczAhG/giphy.gif?cid=ecf05e47b088bx2o3q8k16a642dn215c1rnu2rv0wtivrfnh&rid=giphy.gif&ct=g");
+  transform: rotateY(40deg) translateZ(430px);
+}
+.carousel__face:nth-child(3) {
+  background-image: url("https://fat.gfycat.com/AggravatingLimpingChanticleer.mp4");
+  transform: rotateY(80deg) translateZ(430px);
+}
+.carousel__face:nth-child(4) {
+  background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(120deg) translateZ(430px);
+}
+.carousel__face:nth-child(5) {
+  background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(160deg) translateZ(430px);
+}
+.carousel__face:nth-child(6) {
+  background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(200deg) translateZ(430px);
+}
+.carousel__face:nth-child(7) {
+  background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(240deg) translateZ(430px);
+}
+.carousel__face:nth-child(8) {
+  background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(280deg) translateZ(430px);
+}
+.carousel__face:nth-child(9) {
+  background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+.Home{
+  background: linear-gradient(
+    109.6deg,
+    rgb(36, 45, 57) 11.2%,
+    rgb(16, 37, 60) 51.2%,
+    rgb(0, 0, 0) 98.6%
+  );
+}
+ 
+
+
+
+
+
+
+/* 
+ .Container {
+  position: relative;
+  width: 320px;
+  margin: 100px auto 0 auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 120s infinite forwards linear;
+}
+.carousel__face {
+  position: absolute;
+  width: 350px;
+  height: 187px;
+  top: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(227, 219, 219, 0.369);
+  display: flex;
+}
+
+span {
+  margin: auto;
+  font-size: 2rem;
+}
+.russel {
+  background-color: white;
+}
+
+.carousel__face:nth-child(1) {
+  background-image: url("");
+  transform: rotateY(0deg) translateZ(550px);
+}
+.carousel__face:nth-child(2) {
+  background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(40deg) translateZ(550px);
+}
+.carousel__face:nth-child(3) {
+  background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(80deg) translateZ(550px);
+}
+.carousel__face:nth-child(4) {
+  background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(120deg) translateZ(550px);
+}
+.carousel__face:nth-child(5) {
+  background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(160deg) translateZ(550px);
+}
+.carousel__face:nth-child(6) {
+  background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(200deg) translateZ(550px);
+}
+.carousel__face:nth-child(7) {
+  background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(240deg) translateZ(550px);
+}
+.carousel__face:nth-child(8) {
+  background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(280deg) translateZ(550px);
+}
+.carousel__face:nth-child(9) {
+  background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(320deg) translateZ(550px);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+} */
