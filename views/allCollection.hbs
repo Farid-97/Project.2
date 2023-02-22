@@ -1,4 +1,4 @@
-{{!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+{{! <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <img class="logo" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nba.png&w=288&h=288&transparent=true" alt="NBA">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,8 +25,7 @@
       </ul>
     </div>
   </div>
-</nav --}}
-
+</nav }}
 
 <nav
   class="navbar navbar-expand-lg bg-body-tertiary navbar bg-primary"
@@ -51,19 +50,27 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="d-flex navbar-nav navUl">
-        <li class="nav-item ">
-          <a class="btn btn-outline-light btn-sm me-2" aria-current="page" href="/">Home page</a>
+        <li class="nav-item">
+          <a
+            class="btn btn-outline-light btn-sm me-2"
+            aria-current="page"
+            href="/"
+          >Home page</a>
         </li>
-        <li class="nav-item ">
-          <a class="btn btn-outline-light btn-sm me-2" href="/allCollections">All collection</a>
+        <li class="nav-item">
+          <a
+            class="btn btn-outline-light btn-sm me-2"
+            href="/allCollections"
+          >All collection</a>
         </li>
-        {{!-- <li class="nav-item align-items-center">
+        {{! <li class="nav-item align-items-center">
           <form action="/logout" method="post">
             <button type="submit">Log Out</button>
           </form>
-        </li> --}}
+        </li> }}
         <li class="nav-item">
-          <a href="/logout" class="btn btn-outline-light btn-sm logout me-2">Log Out</a>
+          <a href="/logout" class="btn btn-outline-light btn-sm logout me-2">Log
+            Out</a>
         </li>
         <li class="nav-item">
           <form class="d-flex" role="search">
@@ -83,3 +90,35 @@
     </div>
   </div>
 </nav>
+<body class="back">
+  
+
+<div class="wrapper">
+  <div class="bg"> Cards collection </div>
+  <div class="fg"> Cards collection </div>
+</div>
+<section class="organize">
+ 
+  {{#each cardsCollection}}
+  <div class="card">
+    <div class="image">
+      <img class="front"
+        src="{{imageCard}}"
+      />
+    </div>
+    <div class="details">
+      <div class="center">
+        <h1 class="inside">{{name}}<br /><span class="insides">{{team}}</span></h1>
+        <p class="p">{{shirtNumber}}</p>
+        <ul class="ul">
+          <li class="li"><a class="a" href="#"><i
+                class="fa {{!-- fa-facebook --}}"
+                aria-hidden="true"
+              ></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</section>
+</body>
