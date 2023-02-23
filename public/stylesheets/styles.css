@@ -526,8 +526,12 @@ span {
   background-image: url("https://media0.giphy.com/media/xT4uQfHn1CUGyYsiiY/giphy.gif?cid=ecf05e47u7492zxe0ihtqu0mqg95vuhd7iq1ayelz8leezsc&rid=giphy.gif&ct=g");
   transform: rotateY(120deg) translateZ(430px);
 }
-.carousel__face:nth-child(5) {
+/* .carousel__face:nth-child(5) {
   background-image: url("https://media1.giphy.com/media/8xEgezvmvr3zJ0KDET/giphy.gif?cid=ecf05e47czi4irlro8wgntohk99l8fbuxgeu3dvens0suhdr&rid=giphy.gif&ct=g");
+  transform: rotateY(160deg) translateZ(430px);
+} */
+.carousel__face:nth-child(5) {
+  background-image: url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWIxZWM3ZDk5ZjhjZDRkMGQ0NGExODUwNGZiM2U5NWJmMTEzMDYwMyZjdD1n/l41YhmC0hIcAqC3sY/giphy.gif");
   transform: rotateY(160deg) translateZ(430px);
 }
 .carousel__face:nth-child(6) {
@@ -700,45 +704,7 @@ span {
   }
 }
 
-.containe-login {
-  display: flex;
-  width: 100%;
-  padding: 4% 2%;
-  box-sizing: border-box;
-  height: 85vh;
-}
 
-.Box {
-  flex: 1;
-  overflow: hidden;
-  transition: 0.5s;
-  margin: 0 2%;
-  /* box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1); */
-  line-height: 0;
-}
-
-.Box > img {
-  width: 50%;
-  height: calc(100% - 10vh);
-  object-fit: cover;
-  transition: 0.5s;
-}
-
-.Box > span {
-  font-size: 3.8vh;
-  display: block;
-  text-align: center;
-  height: 10vh;
-  line-height: 2.6;
-}
-
-.Box:hover {
-  flex: 1 1 50%;
-}
-.Box:hover > img {
-  width: 100%;
-  height: 100%;
-}
 
 .animate.pop {
   animation-name: animate-pop;
@@ -758,10 +724,144 @@ span {
   }
 }
 
+.nbaReference{
+  background: linear-gradient(
+    109.6deg,
+    rgb(36, 45, 57) 11.2%,
+    rgb(16, 37, 60) 51.2%,
+    rgb(0, 0, 0) 98.6%
+  );
+}
+.banana{
+  color:whitesmoke;
+  font-size: 10px!important;
+  margin: 0px 50px 40px 50px;
+}
 
-.TEXT{
-  margin-top: 400px;
-  
+.LOL{
+  margin-top: 600PX;
+  padding-left: 25px;
+  padding-bottom: 45px;
+  text-align: center;
+  color: whitesmoke;
+}
+
+
+.showPlayers {
   display: flex;
-  flex-direction: row;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.playerBox {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.playerBox > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.playerBox > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  color: white;
+  line-height: 2.6;
+}
+
+.playerBox:hover { flex: 1 1 50%; }
+.playerBox:hover > img {
+  width: 100%;
+  height: 100%;
+}
+ 
+
+
+
+html {
+  height: 100%;
+}
+
+ .badjoras {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+    109.6deg,
+    rgb(36, 45, 57) 11.2%,
+    rgb(16, 37, 60) 51.2%,
+    rgb(0, 0, 0) 98.6%
+  );
+  margin-right: auto;
+  
+  margin-bottom: 50px;
+}
+
+.perspective-text {
+  color: white;
+  font-family: Arial;
+  font-size: 58px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.perspective-line {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+p {
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.5s ease-in-out;
+}
+
+.perspective-line:nth-child(odd) {
+  transform: skew(60deg, -30deg) scaleY(0.667);
+}
+
+.perspective-line:nth-child(even) {
+  transform: skew(0deg, -30deg) scaleY(1.337);
+}
+
+.perspective-text:hover p {
+  transform: translate(0, -50px);
+}
+
+.perspective-line:nth-child(1) {
+  left: 29px;
+}
+
+.perspective-line:nth-child(2) {
+  left: 58px;
+  background: #911404;
+}
+
+.perspective-line:nth-child(3) {
+  left: 87px;
+  background: #f9fcfe;
+}
+
+.perspective-line:nth-child(4) {
+  left: 116px;
+  background: #02227b;
+}
+
+.perspective-line:nth-child(5) {
+  left: 145px;
 }
