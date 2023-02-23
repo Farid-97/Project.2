@@ -26,12 +26,25 @@ router.get("/signup", (req, res, next) => res.render("auth/signup"));
     }
   }) */
   
-
-router.post("/signup", async (req, res, next) => {
-  try {
-    let { username, email, password, goat } = req.body;
-    const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{4,}$/;
-    if (!username || !password || !email || !goat) {
+  
+  router.post("/signup", async (req, res, next) => {
+    try {
+      let { username, email, password, goat } = req.body;
+      const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{4,}$/;
+      let response = await User.findOne({email: `${email}`});
+      let responseUser = await User.findOne({username: `${username}`});
+      if(response){
+        res.render("auth/signup", {
+          errorMessage: "Email already registered",
+        })
+      }
+      
+      if(responseUser){
+        res.render("auth/signup", {
+          errorMessage: "Username already registered",
+        })
+      }
+      if (!username || !password || !email || !goat) {
       res.render("auth/signup", {
         errorMessage: "Please input all the fields",
       });

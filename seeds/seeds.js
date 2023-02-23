@@ -21,6 +21,7 @@ const players = [
     ppg: 19.1,
     rpg: 4.5,
     apg: 2.3,
+    stp: 0 ,
     shirtNumber: 22,
     per: 14.7,
     awards: [
@@ -233,6 +234,7 @@ const players = [
     ppg: 30.1,
     rpg: 6.2,
     apg: 5.3,
+    stp: 0,
     shirtNumber: 23,
     per: 27.9,
     awards: [
