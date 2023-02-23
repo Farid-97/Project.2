@@ -143,12 +143,5 @@ router.get("/:id/profile", async (req, res, next) => {
     next(error);
   }
 });
-/* router.get("/profile/:id", async (req, res, next) => {
-  try {
-    let id = req.params.id;
-    let user = await User.findById(id);
-    res.render("profile", { user });
-  } catch (error) {}
-}); */
 
 module.exports = router;
