@@ -67,21 +67,41 @@
   </div>
 </nav>
 <section class="playerDetails">
-    <div class="card cardPlayerDetails">
-      <div class="image">
-        <img class="front" src="{{imageCard}}" />
-      </div>
-      <div class="details">
-        <div class="center">
-          <h1 class="inside">{{name}}<br /><span
-              class="insides"
-            >{{team}}</span></h1>
-          <p class="p">{{shirtNumber}}</p>
-        </div>
+  <div class="displayCardInfo">
+    <h4 class="h4Color">"{{nickname}}"</h4>
+    <hr class="hrNotIndex"/>
+    <p class="h4Color">Team: {{team}}</p>
+    <p class="h4Color">Position: {{position}}</p>
+    <p class="h4Color">Card Rarity: {{rarity}}</p>
+    <p class="h4Color">Shirt Number: {{shirtNumber}}</p>
+    <div class="displayAwards">
+    {{#unless awards}}
+        <p class="h6Color">Awards: None</p>
+    {{/unless}}
+    {{#if awards}}
+       <p class="h6Color">Awards: {{#each awards}}<p class="h6Color">{{this}} </p>{{/each}}</p>
+    {{/if}}
+    </div>
+  </div>
+  <div class="card cardPlayerDetails">
+    <div class="image">
+      <img class="front" src="{{imageCard}}" />
+    </div>
+    <div class="details">
+      <div class="center">
+        <h1 class="inside">{{name}}<br /><span
+            class="insides"
+          >{{team}}</span></h1>
+        <p class="p">{{shirtNumber}}</p>
       </div>
     </div>
-
-    <div>
-        <p>{{}}</p>
-    </div>
-  </section>
+  </div>
+  <div class="displayCardInfo">
+    <h4 class="h4Color">Statistics</h4>
+    <hr class="hrNotIndex"/>
+    <p class="h4color">Points Per Game: {{ppg}}</p>
+    <p class="h4color">Rebounds Per Game: {{rpg}}</p>
+    <p class="h4color">Assists Per Game: {{apg}}</p>
+    <p class="h4color">Player Efficiency Rating: {{per}}</p>    
+  </div>
+</section>

@@ -20,8 +20,8 @@ nav {
   height: 50px;
   object-fit: contain;
 }
-.profileImgDiv{
-padding-top: 10px;
+.profileImgDiv {
+  padding-top: 10px;
 }
 
 .profileImg {
@@ -30,7 +30,7 @@ padding-top: 10px;
   width: 8.5vw;
   height: 17vh;
 }
-hr {
+.hrNotIndex {
   border: 2px solid white;
   width: 210px;
 }
@@ -42,7 +42,7 @@ hr {
   margin: 15px;
   height: 75vh;
   font-size: 1.2em;
-  text-align:center;
+  text-align: center;
   border: 2px solid #eee;
   border-radius: 20px;
   box-sizing: border-box;
@@ -238,14 +238,14 @@ hr {
   );
 }
 
-.courtLineup{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 50vw;
-    height: calc(100vh - 64px);
-    background-image: url("../images/court.jpg");
-    background-size: cover;
+.courtLineup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50vw;
+  height: calc(100vh - 64px);
+  background-image: url("../images/court.jpg");
+  background-size: cover;
 }
 
 .pickPlayer {
@@ -279,23 +279,22 @@ hr {
 }
 
 /* $color: gray-400; */
-.pickPlayerDiv{
-  display:flex;
+.pickPlayerDiv {
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: 15px;
   height: 75vh;
   font-size: 1.2em;
-  text-align:center;
+  text-align: center;
   border: 2px solid #eee;
   border-radius: 20px;
   box-sizing: border-box;
   box-shadow: 5px 5px 10px 0 #cb9500a3;
   margin: 50px 3% 0 3%;
   width: 21%;
-
 }
-.pickPlayer{
+.pickPlayer {
   color: white;
 }
 
@@ -491,12 +490,12 @@ div.fg {
   color: #1e2127;
   transform: scale(1);
 }
-.fa{
+.fa {
   padding-top: 5px;
 }
-.profileInfo{
+.profileInfo {
   margin-bottom: 10px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
 }
 .Container {
@@ -587,12 +586,12 @@ span {
     rgb(0, 0, 0) 98.6%
   );
 }
-.editProfileDiv{
+.editProfileDiv {
   position: relative;
   width: 350px;
   height: 500px;
   border-radius: 20px;
-  margin-top:25px;
+  margin-top: 25px;
   padding: 40px;
   box-sizing: border-box;
   background: linear-gradient(
@@ -603,32 +602,27 @@ span {
   );
   box-shadow: 14px 14px 20px #f3f0eba3, -14px -14px 20px #e8e7e6a3;
 }
-.steveKerr{
-    margin-bottom:79px;
-    height: 80vh;
-    /* padding-right: 50px; */
+.steveKerr {
+  margin-bottom: 79px;
+  height: 80vh;
+  /* padding-right: 50px;*/
 }
-.saveProfile{
+.saveProfile {
   margin-top: 35px;
 }
-.lebronJames{
+.lebronJames {
   height: 80vh;
   padding-right: 70px;
   padding-top: 20px;
 }
 
-#formEditProfile{
+#formEditProfile {
   display: flex;
   flex-direction: column;
   padding-top: 50px;
   /* padding-left: 110px; */
   padding-right: 110px;
 }
-
-
-
-/* 
- .Container {
 
 .Body {
   display: flex;
@@ -778,7 +772,7 @@ span {
   overflow: hidden;
   transition: 0.5s;
   margin: 0 2%;
-  /* box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1); */
+  /*box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);*/
   line-height: 0;
 }
 
@@ -822,40 +816,94 @@ span {
     transform: scale(1, 1);
   }
 }
+.textDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* .mjQuote{
+  display: flex;
+  justify-content: flex-start;
+} */
+.hrIndex{
+  color:white;
+  border: solid 2px;
+  width: 200px;
+}
 
-
-.TEXT{
+.TEXT {
   margin-top: 400px;
-  
+
   display: flex;
   flex-direction: row;
 }
 
-
-.playerDetails{  
-    height: calc(100vh - 64px);
-    background: #959595; /* Old browsers */
-    background: -moz-linear-gradient(top,  #1D1D1D 0%, #383838 46%, #4e4e4e 50%, #4e4e4e 53%, #383838 76%, #1D1D1D 87%, #060606 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #1D1D1D 0%, #383838 46%, #4e4e4e 50%, #4e4e4e 53%, #383838 76%, #1D1D1D 87%, #060606 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #1D1D1D 0%, #383838 46%, #4e4e4e 50%, #4e4e4e 53%, #383838 76%, #1D1D1D 87%, #060606 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.playerDetails {
+  height: calc(100vh - 64px);
+  background: #959595; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #1d1d1d 0%,
+    #383838 46%,
+    #4e4e4e 50%,
+    #4e4e4e 53%,
+    #383838 76%,
+    #1d1d1d 87%,
+    #060606 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #1d1d1d 0%,
+    #383838 46%,
+    #4e4e4e 50%,
+    #4e4e4e 53%,
+    #383838 76%,
+    #1d1d1d 87%,
+    #060606 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #1d1d1d 0%,
+    #383838 46%,
+    #4e4e4e 50%,
+    #4e4e4e 53%,
+    #383838 76%,
+    #1d1d1d 87%,
+    #060606 100%
+  ); /*W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.cardPlayerDetails{
-  margin-top: 95px;
+.cardPlayerDetails {
+  margin-top: 20px;
 }
+.displayCardInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  height: 70vh;
+  font-size: 1.2em;
+  text-align: center;
+  border: 2px solid #eee;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px 0 #d199009f;
+  margin: 50px 5% 0 5%;
+  width: 21%;
 
-.h4Color{
+}
+.h4Color {
   padding-top: 10px;
   color: White;
   font-weight: 600;
   font-size: 14px;
 }
-
-@keyframes rotate360 {
+/*
+ @keyframes rotate360 {
   from {
     transform: rotateY(0deg);
   }
@@ -864,18 +912,33 @@ span {
     opacity: 1;
     transform: scale(1, 1);
   }
-}
-
-
-.TEXT{
-  margin-top: 400px;
-  
-  display: flex;
-  flex-direction: row;
-}
-
-.h6Color{
+} 
+*/
+.h6Color {
   color: White;
   font-weight: 600;
   font-size: 14px;
+}
+.displayAwards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.absolute{
+  width: 300px;
+  height: 25px;
+  left: 40%;
+  top: 23%;
+  position:absolute;
+  color: white;
+}
+.absolute2{
+  font-size: 14px;
+  width: 300px;
+  height: 25px;
+  left: 40%;
+  top: 22%;
+  position:absolute;
+  color: white;
 }

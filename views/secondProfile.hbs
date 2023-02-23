@@ -72,13 +72,13 @@
         class="profileImg"
       />
     </div>
-    <hr>
+    <hr class="hrNotIndex">
     <ul class="personalInfo alignText">
       <li class="profileInfo">Coach: {{user.username}}</li>
       <li class="profileInfo">G.O.A.T: {{user.GOAT}}</li>
       <li class="profileInfo">Cards Collected: {{user.cardsCollected}}</li>
     </ul>
-    <hr>
+    <hr class="hrNotIndex">
       <a class="profileInfo btn btn-outline-light" href="/editPersonalProfile/{{user._id}}">Edit Profile</a>
       {{#unless existStartlineup}}
       <a class="profileInfo btn btn-outline-light" href="/start-line-up/{{user._id}}">Create Start Lineup</a>
