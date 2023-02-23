@@ -38,7 +38,7 @@
           <a href="/logout" class="btn btn-outline-light btn-sm logout me-2">Log
             Out</a>
         </li>
-        <li class="nav-item">
+        <li class=" nav-item">
           <form class="d-flex" role="search">
             <input
               class="form-control me-2 h-25 w-100"
@@ -65,39 +65,39 @@
     <div class="round player4 defaultPic"><h6>Player 4</h6></div>
     <div class="round player5 defaultPic"><h6>Player 5</h6></div>
   </div>
-  <div>
+  <div class="pickPlayerDiv">
     <form class="pickPlayer" action="/start-line-up/{{user._id}}/edit" method="post">
-      <label for="player1" >Choose a player 1</label>
-      <select name="player1" id="selection1"class="playerLabel">
+      <label for="player1" >Choose player 1</label>
+      <select name="player1" id="selection1"class="playerLabel btn-sm btn btn-secondary" required>
         {{#each players}}
           <option value="{{_id}}"> {{name}}</option>
         {{/each}}
       </select>
-      <label for="player2" >Choose a player 2</label>
-      <select name="player2" id="selection2" class="playerLabel">
+      <label for="player2" >Choose player 2</label>
+      <select name="player2" id="selection2" class="playerLabel btn-sm btn btn-secondary">
         {{#each players}}
           <option value="{{_id}}"> {{name}}</option>
         {{/each}}
       </select>
-      <label for="player3" >Choose a player 3</label>
-      <select name="player3" id="selection3" class="playerLabel">
+      <label for="player3" class="pickPlayer">Choose player 3</label>
+      <select name="player3" id="selection3" class="playerLabel btn-sm btn btn-secondary">
         {{#each players}}
           <option value="{{_id}}"> {{name}}</option>
         {{/each}}
       </select>
-      <label for="player4">Choose a player 4</label>
-      <select name="player4" id="selection4" class="playerLabel">
+      <label for="player4">Choose player 4</label>
+      <select name="player4" id="selection4" class="playerLabel btn-sm btn btn-secondary">
         {{#each players}}
           <option value="{{_id}}"> {{name}}</option>
         {{/each}}
       </select>
-      <label for="player5" >Choose a player 5</label>
-      <select name="player5" id="selection5" class="playerLabel">
+      <label for="player5" >Choose player 5</label>
+      <select name="player5" id="selection5" class="playerLabel btn btn-sm btn btn-secondary">
         {{#each players}}
           <option value="{{_id}}"> {{name}}</option>
         {{/each}}
       </select>
-      <button id="submitStartlineup">submit</button>
+      <button id="submitStartlineup" class="btn btn-outline-warning btn-sm">Save LineUp</button>
     </form>
   </div>
 </section>

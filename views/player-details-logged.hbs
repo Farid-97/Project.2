@@ -1,4 +1,3 @@
-
 <nav
   class="navbar navbar-expand-lg bg-body-tertiary navbar bg-primary"
   data-bs-theme="dark"
@@ -22,38 +21,24 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="d-flex navbar-nav navUl">
+
         <li class="nav-item">
           <a
             class="btn btn-outline-light btn-sm me-2"
             aria-current="page"
-            href="/"
-          >Home page</a>
+            href="/{{idUser._id}}/profile"
+          >Profile</a>
         </li>
         <li class="nav-item">
           <a
             class="btn btn-outline-light btn-sm me-2"
-            aria-current="page"
-            href="/signup"
-          >Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="btn btn-outline-light btn-sm me-2"
-            aria-current="page"
-            href="/login"
-          >Log In</a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="btn btn-outline-light btn-sm me-2"
-            href="/allCollection"
+            href="/allCollection/{{idUser._id}}"
           >All collection</a>
         </li>
-        {{! <li class="nav-item align-items-center">
-          <form action="/logout" method="post">
-            <button type="submit">Log Out</button>
-          </form>
-        </li> }}
+        <li class="nav-item">
+          <a href="/logout" class="btn btn-outline-light btn-sm logout me-2">Log
+            Out</a>
+        </li>
         <li class="nav-item">
           <form class="d-flex" role="search">
             <input
@@ -72,35 +57,42 @@
     </div>
   </div>
 </nav>
-<body class="back">
-  
-
-<div class="wrapper">
-  <div class="bg"> Cards collection </div>
-  <div class="fg"> Cards collection </div>
-</div>
-<section class="organize">
- 
-  {{#each cardsCollection}}
-  <div class="card">
+<section class="playerDetails">
+  <div class="card cardPlayerDetails">
     <div class="image">
-      <img class="front"
-        src="{{imageCard}}"
-      />
+      <img class="front" src="{{playerCard.imageCard}}" />
     </div>
     <div class="details">
       <div class="center">
-        <h1 class="inside">{{name}}<br /><span class="insides">{{team}}</span></h1>
-        <p class="p">{{shirtNumber}}</p>
-        <ul class="ul">
-          <li class="li"><a class="a" href="/players-details/{{_id}}"><i
-                class="fa"
-                aria-hidden="true"
-              >Details</i></a></li>
-        </ul>
+        <h1 class="inside">{{playerCard.name}}<br /><span
+            class="insides"
+          >{{playerCard.team}}</span></h1>
+        <p class="p">{{playerCard.shirtNumber}}</p>
       </div>
     </div>
   </div>
-  {{/each}}
+  <div class="displayCardInfo">
+    <h4 class="h4Color">"{{playerCard.nickname}}"</h4>
+    <hr />
+    <p class="h4Color">Team: {{playerCard.team}}</p>
+    <p class="h4Color">Position: {{playerCard.position}}</p>
+    <p class="h4Color">Card Rarity: {{playerCard.rarity}}</p>
+    <p class="h4Color">Shirt Number: {{playerCard.shirtNumber}}</p>
+    <div class="displayAwards">
+    {{#unless playerCard.awards}}
+        <p class="h6Color">Awards: None</p>
+    {{/unless}}
+    {{#if playerCard.awards}}
+       <p class="h6Color">Awards: {{#each playerCard.awards}}<p class="h6Color">{{this}} </p>{{/each}}</p>
+    {{/if}}
+    </div>
+  </div>
+  <div class="displayCardInfo">
+    <h4 class="h4Color">Statistics</h4>
+    <hr />
+    <p class="h4color">Points Per Game: {{playerCard.ppg}}</p>
+    <p class="h4color">Rebounds Per Game: {{playerCard.rpg}}</p>
+    <p class="h4color">Assists Per Game: {{playerCard.apg}}</p>
+    <p class="h4color">Player Efficiency Rating: {{playerCard.per}}</p>    
+  </div>
 </section>
-</body>

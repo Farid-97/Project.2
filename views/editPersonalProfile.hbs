@@ -21,24 +21,17 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="d-flex navbar-nav navUl">
-        {{! <li class="nav-item">
-          <a
-            class="btn btn-outline-light btn-sm me-2"
-            aria-current="page"
-            href="/"
-          >Home page</a>
-        </li> }}
         <li class="nav-item">
           <a
             class="btn btn-outline-light btn-sm me-2"
             aria-current="page"
-            href="/{{user._id}}/profile"
+            href="/{{_id}}/profile"
           >Profile</a>
         </li>
         <li class="nav-item">
           <a
             class="btn btn-outline-light btn-sm me-2"
-            href="/allCollection/{{user._id}}"
+            href="/allCollection/{{_id}}"
           >All collection</a>
         </li>
         <li class="nav-item">
@@ -63,23 +56,22 @@
     </div>
   </div>
 </nav>
-<section class="Goat d-flex flex-row">
-
+<section class="d-flex align-items-center justify-content-around" id="startlineupSection">
   <div>
     <img
-      class="LBJ"
-      src="/images/png-transparent-lebron-james-illustration-nba-all-star-game-jumpman-los-angeles-lakers-basketball-basketball-players-tshirt-game-sport-thumbnail-removebg-preview.png"
+      class="steveKerr"
+      src="/images/steverKerr.png"
       alt=""
     />
   </div>
-  <div id="form" class="signupForm">
-    <div class="container">
-      <div class="brand-title">NBA</div>
+  <div id="formEditProfile" class="signupForm align-self-baseline">
+    <div class="editProfileDiv">
+      <div class="brand-title"><span style="color:blue">N</span>B<span style="color:red">A</span></div>
       <div class="inputs">
         <form action="/editPersonalProfile/{{_id}}/edit" method="post">
 
           <label class="labelSignup" for="username">Username</label>
-          <input
+          <input class="inputSignup"
             type="text"
             name="username"
             id="username"
@@ -87,15 +79,22 @@
           />
 
           <label class="labelSignup" for="GOAT">G.O.A.T</label>
-          <input type="text" name="GOAT" id="goat" value="{{GOAT}}" />
+          <input type="text" name="GOAT" id="goat" class="inputSignup" value="{{GOAT}}" />
 
           <label class="labelSignup" for="password">Password</label>
-          <input type="password" name="password" id="password" />
+          <input type="password" name="password" class="inputSignup" id="password" placeholder="Uppercase and Lowercase min 6 chars"/>
 
-          <button type="submit">Save Changes</button>
+          <button type="submit" class="btn btn-outline-warning btn-md saveProfile">Save Changes</button>
         </form>
 
       </div>
     </div>
+  </div>
+  <div>
+    <img
+      class="lebronJames"
+      src="/images/Lebron-James-Lakers-PNG-HD-removebg-preview.png"
+      alt=""
+    />
   </div>
 </section>

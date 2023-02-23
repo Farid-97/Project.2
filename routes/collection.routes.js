@@ -34,6 +34,27 @@ const cardsCollection = await Cards.find().sort(sort);
 
 } );
 
+router.get('/player-details/:id', async (req, res, next) => {
+  try {
+    let playerCard = await Cards.findById(req.params.id);
+    let idUser = req.session.user
+    res.render('player-details-logged', {playerCard, idUser})
+  } catch (error) {
+    console.log(error)
+    next(error)
+  }
+})
+
+router.get('/players-details/:id', async (req, res, next) => {
+  try {
+    let playerCard = await Cards.findById(req.params.id);
+    res.render('player-details', playerCard)
+  } catch (error) {
+    console.log(error)
+    next(error)
+  }
+})
+
 
 
 router.get("/nbacards", async (req, res, next) => {
