@@ -21,17 +21,18 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="d-flex navbar-nav navUl">
+
         <li class="nav-item">
           <a
             class="btn btn-outline-light btn-sm me-2"
             aria-current="page"
-            href="/{{_id}}/profile"
+            href="/{{idUser._id}}/profile"
           >Profile</a>
         </li>
         <li class="nav-item">
           <a
             class="btn btn-outline-light btn-sm me-2"
-            href="/allCollection/{{_id}}"
+            href="/allCollection/{{idUser._id}}"
           >All collection</a>
         </li>
         <li class="nav-item">
@@ -56,50 +57,42 @@
     </div>
   </div>
 </nav>
-<section class="d-flex align-items-center justify-content-around" id="startlineupSection">
-  <div>
-    <img
-      class="steveKerr"
-      src="/images/steverKerr.png"
-      alt=""
-    />
+<section class="playerDetails">
+  <div class="displayCardInfo">
+    <h4 class="h4Color">"{{playerCard.nickname}}"</h4>
+    <hr class="hrNotIndex"/>
+    <p class="h4Color">Team: {{playerCard.team}}</p>
+    <p class="h4Color">Position: {{playerCard.position}}</p>
+    <p class="h4Color">Card Rarity: {{playerCard.rarity}}</p>
+    <p class="h4Color">Shirt Number: {{playerCard.shirtNumber}}</p>
+    <div class="displayAwards">
+    {{#unless playerCard.awards}}
+        <p class="h6Color">Awards: None</p>
+    {{/unless}}
+    {{#if playerCard.awards}}
+       <p class="h6Color">Awards: {{#each playerCard.awards}}<p class="h6Color">{{this}} </p>{{/each}}</p>
+    {{/if}}
+    </div>
   </div>
-  <div id="formEditProfile" class="signupForm align-self-baseline">
-    <div class="editProfileDiv">
-      <div class="brand-title"><span style="color:blue">N</span>B<span style="color:red">A</span></div>
-      <div class="inputs">
-        <form action="/editPersonalProfile/{{_id}}/edit" method="post">
-
-          <label class="labelSignup" for="username">Username</label>
-          <input class="inputSignup"
-            type="text"
-            name="username"
-            id="username"
-            value="{{username}}"
-          />
-
-          <label class="labelSignup" for="GOAT">G.O.A.T</label>
-          <input type="text" name="GOAT" id="goat" class="inputSignup" value="{{GOAT}}" />
-
-          <label class="labelSignup" for="password">Password</label>
-          <input type="password" name="password" class="inputSignup" id="password" placeholder="Uppercase and Lowercase min 6 chars"/>
-
-          <button type="submit" class="btn btn-outline-warning btn-md saveProfile">Save Changes</button>
-        </form>
-
+  <div class="card cardPlayerDetails">
+    <div class="image">
+      <img class="front" src="{{playerCard.imageCard}}" />
+    </div>
+    <div class="details">
+      <div class="center">
+        <h1 class="inside">{{playerCard.name}}<br /><span
+            class="insides"
+          >{{playerCard.team}}</span></h1>
+        <p class="p">{{playerCard.shirtNumber}}</p>
       </div>
     </div>
   </div>
-  <div>
-    <img
-      class="lebronJames"
-      src="/images/Lebron-James-Lakers-PNG-HD-removebg-preview.png"
-      alt=""
-    />
-  </div>
-  <div class="absolute2">
-    {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
-    {{/if}}
+  <div class="displayCardInfo">
+    <h4 class="h4Color">Statistics</h4>
+    <hr class="hrNotIndex"/>
+    <p class="h4color">Points Per Game: {{playerCard.ppg}}</p>
+    <p class="h4color">Rebounds Per Game: {{playerCard.rpg}}</p>
+    <p class="h4color">Assists Per Game: {{playerCard.apg}}</p>
+    <p class="h4color">Player Efficiency Rating: {{playerCard.per}}</p>    
   </div>
 </section>
