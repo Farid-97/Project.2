@@ -37,20 +37,45 @@
     </div>
   </div>
 </nav>
-<section style="color: blue;">
-<div>
-  <div class="container">
-      <div class="brand-title">NBA</div>
+<section class="Goat d-flex flex-row">
+
+ 
+    <div class="containe-login">
+  <div class="Box">
+    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2022/12/896/500/Luka-Doncic-1.jpg?ve=1&tl=1">
+  </div>
+  
+  
+
+  </div>
+  <div id="form" class="signupForm animate pop">
+    <div class="containe">
+      <div class="brand-title"><span style="color:blue">N</span>B<span style="color:red">A</span></div>
       <div class="inputs">
-        <form action="/login" method="post">
+        <form action="/signup" method="post">
           <label class="labelSignup" name="username">Username</label>
-          <input class="inputSignup" type="text" name="username" placeholder="Norberto" />
-          <label class="labelSignup" name="password">PASSWORD</label>
+          <input class="inputSignup" type="text" name="username" placeholder="Norberto"/>
+          <label class="labelSignup" name="password">Password</label>
           <input class="inputSignup" type="password" name="password" placeholder="Min 6 charaters long" />
-          <button class="buttonSignup"type="submit">Log In</button>
+          <button class="buttonSignup"type="submit">Signup</button>
         </form>
       </div>
+      
     </div>
+ 
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </div>
+   <div class="containe-login">
+  <div class="Box">
+    <img src="https://pyxis.nymag.com/v1/imgs/835/e92/8474c58c6323a72126676e4f897ce8a67d-kyrie-irving-.rsquare.w700.jpg">
+    
+  </div>
+  
+  
+ 
+
 </section>
 
     {{#if errorMessage}}

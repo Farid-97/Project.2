@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const User = require("../models/User.model");
 
 const MONGO_URI =
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/project_2";
+  process.env.MONGODB_URI || "mongodb+srv://db2023:QWERTY2023@cluster0.mvx1sc1.mongodb.net/cards?retryWrites=true&w=majority";
 
 const players = [
   {
