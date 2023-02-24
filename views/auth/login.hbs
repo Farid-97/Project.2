@@ -21,17 +21,28 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="d-flex navbar-nav navUl">
-        <li class="nav-item ">
-          <a class="btn btn-outline-light btn-sm me-2" aria-current="page" href="/">Home Page</a>
+        <li class="nav-item">
+          <a
+            class="btn btn-outline-light btn-sm me-2"
+            aria-current="page"
+            href="/"
+          >Home Page</a>
         </li>
-        <li class="nav-item ">
-          <a class="btn btn-outline-light btn-sm me-2" aria-current="page" href="/signup">Sign up</a>
+        <li class="nav-item">
+          <a
+            class="btn btn-outline-light btn-sm me-2"
+            aria-current="page"
+            href="/signup"
+          >Sign up</a>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item">
           <a class="btn btn-outline-light btn-sm me-2" href="/login">Log In</a>
         </li>
         <li class="nav-item">
-          <a href="/allCollection" class="btn btn-outline-light btn-sm logout me-2">All collection</a>
+          <a
+            href="/allCollection"
+            class="btn btn-outline-light btn-sm logout me-2"
+          >All collection</a>
         </li>
       </ul>
     </div>
@@ -39,36 +50,37 @@
 </nav>
 <section class="Goat d-flex flex-row">
 
-<div>
-    <img
-      class="LBJ"
-      src="/images/Curry-1640731-removebg-preview.png"
-      alt=""
-    />
-  </div>
-
+  <div>
+    <img class="LBJ" src="/images/Curry-1640731-removebg-preview.png" alt="" />
   </div>
   <div id="form" class="signupForm animate pop">
     <div class="containe">
-      <div class="brand-title"><span style="color:blue">N</span>B<span style="color:red">A</span></div>
+      <div class="brand-title"><span style="color:blue">N</span>B<span
+          style="color:red"
+        >A</span></div>
       <div class="inputs">
         <form action="/login" method="post">
           <label class="labelSignup" name="username">Username</label>
-          <input class="inputSignup" type="text" name="username" placeholder="Norberto"/>
+          <input
+            class="inputSignup"
+            type="text"
+            name="username"
+            placeholder="Norberto"
+          />
           <label class="labelSignup" name="password">Password</label>
-          <input class="inputSignup" type="password" name="password" placeholder="Min 6 charaters long" />
+          <input
+            class="inputSignup"
+            type="password"
+            name="password"
+            placeholder="Min 6 charaters long"
+          />
 
-          <button class="buttonSignup"type="submit">Log In</button>
+          <button class="buttonSignup" type="submit">Log In</button>
 
         </form>
       </div>
-      
-    </div>
-  <div class="absolute">
-    {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
-    {{/if}}
 
+    </div>
   </div>
   <div>
     <img
@@ -77,10 +89,10 @@
       alt=""
     />
   </div>
-</section>
-
+  <div class="absolute">
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
-  </form>
-</div>
+
+  </div>
+</section>

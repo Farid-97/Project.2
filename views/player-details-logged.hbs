@@ -40,12 +40,14 @@
             Out</a>
         </li>
         <li class="nav-item">
-          <form class="d-flex" role="search">
+          <form class="d-flex" method="GET" action="/search-player">
+            <label for="searchedPlayer"></label>
             <input
               class="form-control me-2 h-25 w-100"
-              type="search"
+              id="searchedPlayer"
+              type="text"
+              name="searchedPlayer"
               placeholder="Search"
-              aria-label="Search"
             />
             <button
               class="btn btn-outline-light btn-sm"

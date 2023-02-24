@@ -787,10 +787,10 @@ span {
   flex-direction: column;
   justify-content: flex-start;
 }
-/* .mjQuote{
+.mjQuote{
   display: flex;
   justify-content: flex-start;
-} */
+}
 .hrIndex{
   color:white;
   border: solid 2px;
@@ -984,15 +984,12 @@ p {
   align-items: center;
 }
 
-.cardPlayerDetails {
-  margin-top: 20px;
-}
 .displayCardInfo{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 15px;
-  height: 70vh;
+  height: 65vh;
   font-size: 1.2em;
   text-align: center;
   border: 2px solid #eee;
@@ -1036,7 +1033,7 @@ p {
   width: 300px;
   height: 25px;
   left: 40%;
-  top: 23%;
+  top: 20%;
   position:absolute;
   color: white;
 }
@@ -1048,4 +1045,17 @@ p {
   top: 22%;
   position:absolute;
   color: white;
+}
+
+.errorSearch{
+  color: white;
+  font-weight: 600;
+  
+}
+.capital{
+  font-size: 50px;
+  font-weight: 600;
+}
+.textArea{
+  padding-top: 25px;
 }

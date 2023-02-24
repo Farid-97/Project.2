@@ -55,7 +55,19 @@ router.get('/players-details/:id', async (req, res, next) => {
   }
 })
 
+router.get('/search-player', async (req, res, next) => {
+  const query = req.query.searchedPlayer
+  const user = req.session.user
+  let playerFound = await Cards.find( { "name" : { $regex : new RegExp(query, "i") } } );
+  res.render('search-player', {playerFound, user})
 
+})
+router.get('/search-players', async (req, res, next) => {
+  const query = req.query.searchedPlayer
+  let playerFound = await Cards.find( { "name" : { $regex : new RegExp(query, "i") } } );
+  res.render('search-players', {playerFound})
+
+})
 
 router.get("/nbacards", async (req, res, next) => {
   try {

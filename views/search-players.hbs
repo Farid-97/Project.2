@@ -48,8 +48,13 @@
             href="/allCollection"
           >All collection</a>
         </li>
+        {{! <li class="nav-item align-items-center">
+          <form action="/logout" method="post">
+            <button type="submit">Log Out</button>
+          </form>
+        </li> }}
         <li class="nav-item">
-          <form class="d-flex" method="GET" action="/search-player">
+          <form class="d-flex" method="GET" action="/search-players">
             <label for="searchedPlayer"></label>
             <input
               class="form-control me-2 h-25 w-100"
@@ -68,6 +73,13 @@
     </div>
   </div>
 </nav>
+{{#unless playerFound}}
+<section class="playerDetails">
+    <p class="errorSearch"> That Player doesn't exist in our DataBase</p>
+</section>
+{{/unless}}
+{{#if playerFound}}
+{{#each playerFound}}
 <section class="playerDetails">
   <div class="displayCardInfo">
     <h4 class="h4Color">"{{nickname}}"</h4>
@@ -107,3 +119,5 @@
     <p class="h4color">Player Efficiency Rating: {{per}}</p>    
   </div>
 </section>
+{{/each}}
+{{/if}}
